@@ -1,16 +1,26 @@
-## Hi there 👋
+# Jatin Kahar
 
-<!--
-**jatinkahar/jatinkahar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🚀 Java Full Stack Developer @ TCS
 
-Here are some ideas to get you started:
+## About Me
+- Assistant System Engineer Trainee at TCS
+- MCA Graduate (2023–2025)
+- Passionate about Java Backend Development
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech Stack
+- Java
+- Spring Boot
+- SQL
+- HTML
+- CSS
+- DSA
+
+## Projects
+- Sudoku App
+- Chat Application
+- DSA With Java
+- Spring Boot APIs
+
+## Connect With Me
+- LinkedIn: https://linkedin.com/in/jatinkahar
+- Instagram: https://instagram.com/its_me_cyber
