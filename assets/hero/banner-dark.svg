@@ -1,169 +1,1027 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 240" width="100%" height="100%" role="img" aria-label="Jatin Kahar Banner">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1100 240"
+    width="1100"
+    height="240"
+>
+
 <defs>
-<style type="text/css"><![CDATA[
-text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
-@keyframes floatOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.1)}}
-@keyframes floatOrb2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,25px) scale(1.15)}}
-@keyframes pulseGlow{0%,100%{opacity:.6}50%{opacity:1}}
-@keyframes shimmer{0%{transform:translateX(-300px) skewX(-20deg)}100%{transform:translateX(1400px) skewX(-20deg)}}
-@keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes floatSlowReverse{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
-.orb1{animation:floatOrb 8s ease-in-out infinite}
-.orb2{animation:floatOrb2 10s ease-in-out infinite}
-.pulse{animation:pulseGlow 3s ease-in-out infinite}
-.shimmer{animation:shimmer 6s ease-in-out infinite}
-.f1{animation:floatSlow 5s ease-in-out infinite}
-.f2{animation:floatSlowReverse 6s ease-in-out infinite}
+
+<style><![CDATA[
+
+text{
+font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+@keyframes pulse{
+0%{opacity:.25;}
+50%{opacity:.9;}
+100%{opacity:.25;}
+}
+
+@keyframes float1{
+0%{transform:translate(0px,0px);}
+50%{transform:translate(0px,-20px);}
+100%{transform:translate(0px,0px);}
+}
+
+@keyframes float2{
+0%{transform:translate(0px,0px);}
+50%{transform:translate(-30px,18px);}
+100%{transform:translate(0px,0px);}
+}
+
+@keyframes scan{
+
+0%{
+transform:translateX(-1200px);
+}
+
+100%{
+transform:translateX(1200px);
+}
+
+}
+
+@keyframes gridMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(40px);
+}
+
+}
+
+.orb1{
+
+animation:float1 12s ease-in-out infinite;
+
+}
+
+.orb2{
+
+animation:float2 15s ease-in-out infinite;
+
+}
+
+.scan{
+
+animation:scan 9s linear infinite;
+
+}
+
+.grid{
+
+animation:gridMove 10s linear infinite;
+
+}
+
+.glow{
+
+animation:pulse 4s ease infinite;
+
+}
+
 ]]></style>
 
-<!-- Gradients & Themes -->
+<!-- ========================= -->
+
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#050816"/>
-  <stop offset="50%" stop-color="#090e1a"/>
-  <stop offset="100%" stop-color="#050816"/>
+
+<stop offset="0%" stop-color="#050816"/>
+
+<stop offset="50%" stop-color="#08111f"/>
+
+<stop offset="100%" stop-color="#030712"/>
+
 </linearGradient>
 
-<linearGradient id="primaryGlow" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0%" stop-color="#3b82f6"/>
-  <stop offset="100%" stop-color="#06b6d4"/>
+<linearGradient id="blueGlow">
+
+<stop offset="0%" stop-color="#3b82f6"/>
+
+<stop offset="100%" stop-color="#06b6d4"/>
+
 </linearGradient>
 
-<linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0%" stop-color="#60a5fa"/>
-  <stop offset="50%" stop-color="#38bdf8"/>
-  <stop offset="100%" stop-color="#06b6d4"/>
+<linearGradient id="glass">
+
+<stop offset="0%" stop-color="#111827" stop-opacity=".82"/>
+
+<stop offset="100%" stop-color="#0b1120" stop-opacity=".95"/>
+
 </linearGradient>
 
-<linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0%" stop-color="#0f172a" stop-opacity=".85"/>
-  <stop offset="100%" stop-color="#0b1329" stop-opacity=".95"/>
-</linearGradient>
+<filter id="blur">
 
-<linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#3b82f6" stop-opacity=".8"/>
-  <stop offset="50%" stop-color="#06b6d4" stop-opacity=".4"/>
-  <stop offset="100%" stop-color="#1e3a8a" stop-opacity=".8"/>
-</linearGradient>
+<feGaussianBlur stdDeviation="35"/>
 
-<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-  <feGaussianBlur stdDeviation="12" result="blur"/>
-  <feMerge>
-    <feMergeNode in="blur"/>
-    <feMergeNode in="SourceGraphic"/>
-  </feMerge>
 </filter>
 
-<filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-  <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".6"/>
+<filter id="shadow">
+
+<feDropShadow
+dx="0"
+dy="8"
+stdDeviation="14"
+flood-opacity=".45"/>
+
 </filter>
 
 <clipPath id="avatarClip">
-  <circle cx="985" cy="120" r="54"/>
+    <circle cx="115" cy="88" r="50"/>
 </clipPath>
+
 </defs>
 
-<!-- Background -->
-<rect width="1100" height="240" fill="url(#bg)" rx="16"/>
+<!-- ========================= -->
 
-<!-- Ambient Glow Orbs -->
-<circle cx="200" cy="50" r="120" fill="#3b82f6" opacity=".12" filter="url(#glow)" class="orb1"/>
-<circle cx="850" cy="180" r="140" fill="#06b6d4" opacity=".1" filter="url(#glow)" class="orb2"/>
+<rect
+width="1100"
+height="240"
+rx="18"
+fill="url(#bg)"/>
 
-<!-- Animated Grid Lines -->
-<g stroke="#1e293b" stroke-width="1" opacity=".35">
-  <path d="M0 40h1100M0 80h1100M0 120h1100M0 160h1100M0 200h1100" />
-  <path d="M150 0v240M300 0v240M450 0v240M600 0v240M750 0v240M900 0v240" />
+<!-- Glow Left -->
+
+<circle
+cx="120"
+cy="40"
+r="130"
+fill="#2563eb"
+opacity=".18"
+filter="url(#blur)"
+class="orb1"/>
+
+<!-- Glow Right -->
+
+<circle
+cx="980"
+cy="180"
+r="150"
+fill="#06b6d4"
+opacity=".16"
+filter="url(#blur)"
+class="orb2"/>
+
+<!-- Animated Grid -->
+
+<g
+stroke="#17314b"
+stroke-width=".6"
+opacity=".30"
+class="grid">
+
+<path d="M0 40H1100"/>
+
+<path d="M0 80H1100"/>
+
+<path d="M0 120H1100"/>
+
+<path d="M0 160H1100"/>
+
+<path d="M0 200H1100"/>
+
+<path d="M120 0V240"/>
+
+<path d="M240 0V240"/>
+
+<path d="M360 0V240"/>
+
+<path d="M480 0V240"/>
+
+<path d="M600 0V240"/>
+
+<path d="M720 0V240"/>
+
+<path d="M840 0V240"/>
+
+<path d="M960 0V240"/>
+
 </g>
 
-<!-- Floating Tech Elements / Badges (Left/Center) -->
-<g class="f1" transform="translate(480, 25)">
-  <rect x="0" y="0" width="110" height="32" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
-  <text x="55" y="21" text-anchor="middle" font-size="11" fill="#60a5fa" font-weight="bold">☕ Java 17+</text>
+<!-- Floating Particles -->
+
+<g fill="#38bdf8">
+
+<circle cx="80" cy="70" r="2">
+<animate attributeName="cy" values="70;55;70"
+dur="5s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="240" cy="170" r="1.5">
+<animate attributeName="cy"
+values="170;155;170"
+dur="7s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="430" cy="50" r="2">
+<animate attributeName="cy"
+values="50;65;50"
+dur="6s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="720" cy="170" r="2">
+<animate attributeName="cy"
+values="170;150;170"
+dur="9s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1030" cy="80" r="2">
+<animate attributeName="cy"
+values="80;65;80"
+dur="8s"
+repeatCount="indefinite"/>
+</circle>
+
 </g>
 
-<g class="f2" transform="translate(605, 25)">
-  <rect x="0" y="0" width="125" height="32" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1" filter="url(#cardShadow)"/>
-  <text x="62.5" y="21" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="bold">🌱 Spring Boot</text>
+<!-- Scan Line -->
+
+<rect
+
+x="-400"
+
+y="0"
+
+width="220"
+
+height="240"
+
+opacity=".06"
+
+fill="url(#blueGlow)"
+
+transform="skewX(-25)"
+
+class="scan"/>
+  <!-- ================= LEFT GLASS PANEL ================= -->
+
+<g transform="translate(35,20)">
+
+  <!-- Glass Card -->
+  <rect
+      width="760"
+      height="200"
+      rx="18"
+      fill="url(#glass)"
+      stroke="url(#blueGlow)"
+      stroke-opacity=".25"
+      filter="url(#shadow)"/>
+
+  <!-- Accent Line -->
+  <rect
+      width="5"
+      height="200"
+      rx="3"
+      fill="url(#blueGlow)">
+
+      <animate
+          attributeName="opacity"
+          values=".5;1;.5"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+  </rect>
+
+  <!-- Online Badge -->
+
+  <g transform="translate(28,20)">
+
+      <rect
+
+          width="180"
+
+          height="28"
+
+          rx="14"
+
+          fill="#0f172a"
+
+          stroke="#38bdf8"
+
+          stroke-opacity=".45"/>
+
+      <circle
+          cx="16"
+          cy="14"
+          r="4"
+          fill="#22c55e">
+
+          <animate
+              attributeName="opacity"
+              values="1;.2;1"
+              dur="2s"
+              repeatCount="indefinite"/>
+
+      </circle>
+
+      <text
+
+          x="30"
+
+          y="18"
+
+          font-size="11"
+
+          fill="#38bdf8"
+
+          font-weight="600">
+
+          AVAILABLE FOR WORK
+
+      </text>
+
+  </g>
+
+  <!-- NAME -->
+
+  <text
+
+      x="28"
+
+      y="82"
+
+      font-size="36"
+
+      font-weight="700"
+
+      fill="#ffffff">
+
+      Jatin Kahar
+
+  </text>
+
+  <!-- Glow Name -->
+
+  <text
+
+      x="28"
+
+      y="82"
+
+      font-size="36"
+
+      font-weight="700"
+
+      fill="#38bdf8"
+
+      opacity=".25"
+
+      filter="url(#blur)">
+
+      Jatin Kahar
+
+  </text>
+
+  <!-- Typing Role -->
+
+  <text
+
+      x="28"
+
+      y="112"
+
+      font-size="15"
+
+      fill="#94a3b8">
+
+      Java Backend Developer |
+
+      <animate
+
+          attributeName="opacity"
+
+          values="1;0;1"
+
+          dur="1s"
+
+          repeatCount="indefinite"/>
+
+  </text>
+
+  <!-- Description -->
+
+  <text
+
+      x="28"
+
+      y="142"
+
+      font-size="13"
+
+      fill="#64748b">
+
+      Building scalable backend applications using Java,
+
+  </text>
+
+  <text
+
+      x="28"
+
+      y="162"
+
+      font-size="13"
+
+      fill="#64748b">
+
+      Spring Boot, REST APIs and modern cloud technologies.
+
+  </text>
+
+  <!-- ================= TECH STACK ================= -->
+
+  <g transform="translate(28,176)">
+
+      <!-- JAVA -->
+
+      <rect
+
+          width="72"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#3b82f6"/>
+
+      <text
+
+          x="36"
+
+          y="16"
+
+          font-size="10"
+
+          text-anchor="middle"
+
+          fill="#60a5fa">
+
+          JAVA
+
+      </text>
+
+      <!-- SPRING -->
+
+      <g transform="translate(82,0)">
+
+      <rect
+
+          width="98"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#22c55e"/>
+
+      <text
+
+          x="49"
+
+          y="16"
+
+          text-anchor="middle"
+
+          font-size="10"
+
+          fill="#4ade80">
+
+          SPRING
+
+      </text>
+
+      </g>
+
+      <!-- REST -->
+
+      <g transform="translate(190,0)">
+
+      <rect
+
+          width="80"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#06b6d4"/>
+
+      <text
+
+          x="40"
+
+          y="16"
+
+          text-anchor="middle"
+
+          font-size="10"
+
+          fill="#67e8f9">
+
+          REST API
+
+      </text>
+
+      </g>
+
+      <!-- MYSQL -->
+
+      <g transform="translate(280,0)">
+
+      <rect
+
+          width="82"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#2563eb"/>
+
+      <text
+
+          x="41"
+
+          y="16"
+
+          text-anchor="middle"
+
+          font-size="10"
+
+          fill="#93c5fd">
+
+          MYSQL
+
+      </text>
+
+      </g>
+
+      <!-- DOCKER -->
+
+      <g transform="translate(372,0)">
+
+      <rect
+
+          width="88"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#0ea5e9"/>
+
+      <text
+
+          x="44"
+
+          y="16"
+
+          text-anchor="middle"
+
+          font-size="10"
+
+          fill="#7dd3fc">
+
+          DOCKER
+
+      </text>
+
+      </g>
+
+      <!-- GIT -->
+
+      <g transform="translate(470,0)">
+
+      <rect
+
+          width="60"
+
+          height="24"
+
+          rx="12"
+
+          fill="#111827"
+
+          stroke="#f97316"/>
+
+      <text
+
+          x="30"
+
+          y="16"
+
+          text-anchor="middle"
+
+          font-size="10"
+
+          fill="#fb923c">
+
+          GIT
+
+      </text>
+
+      </g>
+
+  </g>
+
 </g>
 
-<g class="f1" transform="translate(745, 25)">
-  <rect x="0" y="0" width="100" height="32" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
-  <text x="50" y="21" text-anchor="middle" font-size="11" fill="#93c5fd" font-weight="bold">🐳 Docker</text>
-</g>
+  <!-- ================= RIGHT PROFILE CARD ================= -->
 
-<!-- Main Profile & Info Container -->
-<g transform="translate(40, 20)">
-  <!-- Left Side Glass Panel -->
-  <rect x="0" y="0" width="790" height="200" rx="14" fill="url(#cardBg)" stroke="url(#borderGrad)" stroke-width="1.5" filter="url(#cardShadow)"/>
-  
-  <!-- Accent Line Left -->
-  <rect x="0" y="0" width="5" height="200" rx="2.5" fill="url(#primaryGlow)"/>
+<g transform="translate(835,20)">
 
-  <!-- Developer Details -->
-  <g transform="translate(30, 28)">
-    <!-- Status Pill -->
-    <rect x="0" y="0" width="195" height="24" rx="6" fill="#1e293b" opacity=".9"/>
-    <circle cx="12" cy="12" r="4" fill="#22c55e" class="pulse"/>
-    <text x="24" y="16" font-size="10" fill="#38bdf8" font-weight="bold" letter-spacing=".5">TCS • ASSISTANT SYS ENG</text>
+    <!-- Glass Card -->
+    <rect
+        x="0"
+        y="0"
+        width="230"
+        height="200"
+        rx="18"
+        fill="url(#glass)"
+        stroke="url(#blueGlow)"
+        stroke-opacity=".25"
+        filter="url(#shadow)"/>
 
-    <!-- Name -->
-    <text x="0" y="65" font-size="34" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing=".5">Jatin Kahar</text>
-    
-    <!-- Title / Subtitle -->
-    <text x="0" y="90" font-size="13" fill="#94a3b8" letter-spacing="1">JAVA BACKEND DEVELOPER &amp; DSA ENTHUSIAST</text>
+    <!-- Outer Glow Ring -->
+    <circle
+        cx="115"
+        cy="88"
+        r="66"
+        fill="none"
+        stroke="#3b82f6"
+        stroke-width="1.2"
+        opacity=".30">
 
-    <!-- Tech Badges Row -->
-    <g transform="translate(0, 110)">
-      <!-- Tech 1 -->
-      <rect x="0" y="0" width="85" height="26" rx="6" fill="#172554" stroke="#3b82f6" stroke-width=".8"/>
-      <text x="42.5" y="17" text-anchor="middle" font-size="10" fill="#93c5fd">Spring Boot</text>
+        <animate
+            attributeName="r"
+            values="66;69;66"
+            dur="3s"
+            repeatCount="indefinite"/>
 
-      <!-- Tech 2 -->
-      <rect x="93" y="0" width="75" height="26" rx="6" fill="#164e63" stroke="#06b6d4" stroke-width=".8"/>
-      <text x="130.5" y="17" text-anchor="middle" font-size="10" fill="#67e8f9">REST APIs</text>
+        <animate
+            attributeName="opacity"
+            values=".25;.75;.25"
+            dur="3s"
+            repeatCount="indefinite"/>
 
-      <!-- Tech 3 -->
-      <rect x="176" y="0" width="70" height="26" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width=".8"/>
-      <text x="211" y="17" text-anchor="middle" font-size="10" fill="#a5b4fc">Docker</text>
+    </circle>
 
-      <!-- Tech 4 -->
-      <rect x="254" y="0" width="65" height="26" rx="6" fill="#064e3b" stroke="#10b981" stroke-width=".8"/>
-      <text x="286.5" y="17" text-anchor="middle" font-size="10" fill="#6ee7b7">Linux</text>
+    <!-- Rotating Ring -->
 
-      <!-- Tech 5 -->
-      <rect x="327" y="0" width="75" height="26" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width=".8"/>
-      <text x="364.5" y="17" text-anchor="middle" font-size="10" fill="#e879f9">Python AI</text>
+    <circle
+        cx="115"
+        cy="88"
+        r="60"
+        fill="none"
+        stroke="#38bdf8"
+        stroke-width="2"
+        stroke-dasharray="12 8">
+
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 115 88"
+            to="360 115 88"
+            dur="18s"
+            repeatCount="indefinite"/>
+
+    </circle>
+
+    <!-- Reverse Ring -->
+
+    <circle
+        cx="115"
+        cy="88"
+        r="54"
+        fill="none"
+        stroke="#06b6d4"
+        stroke-width="1"
+        stroke-dasharray="4 6"
+        opacity=".7">
+
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="360 115 88"
+            to="0 115 88"
+            dur="12s"
+            repeatCount="indefinite"/>
+
+    </circle>
+
+    <!-- Avatar Background -->
+
+    <circle
+        cx="115"
+        cy="88"
+        r="50"
+        fill="#08111f"/>
+
+    <!-- GitHub Avatar -->
+
+    <image
+        href="https://github.com/jatinkahar.png"
+        x="65"
+        y="38"
+        width="100"
+        height="100"
+        preserveAspectRatio="xMidYMid slice"
+        clip-path="url(#avatarClip)"/>
+
+    <!-- Inner Border -->
+
+    <circle
+        cx="115"
+        cy="88"
+        r="50"
+        fill="none"
+        stroke="url(#blueGlow)"
+        stroke-width="2"/>
+
+    <!-- Online Badge -->
+
+    <g transform="translate(150,118)">
+
+        <circle
+            cx="0"
+            cy="0"
+            r="7"
+            fill="#22c55e">
+
+            <animate
+                attributeName="opacity"
+                values="1;.25;1"
+                dur="2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+
+        <circle
+            cx="0"
+            cy="0"
+            r="12"
+            fill="none"
+            stroke="#22c55e"
+            opacity=".5">
+
+            <animate
+                attributeName="r"
+                values="7;14;7"
+                dur="2s"
+                repeatCount="indefinite"/>
+
+            <animate
+                attributeName="opacity"
+                values=".6;0;.6"
+                dur="2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+
     </g>
 
-    <!-- Terminal Code Tagline -->
-    <text x="0" y="162" font-size="11" fill="#64748b">&gt; Building scalable backend applications &amp; high-performance code[cite: 1]</text>
-  </g>
+    <!-- Username -->
+
+    <text
+        x="115"
+        y="165"
+        text-anchor="middle"
+        font-size="15"
+        fill="#ffffff"
+        font-weight="700">
+
+        @jatinkahar
+
+    </text>
+
+    <!-- Small Caption -->
+
+    <text
+        x="115"
+        y="183"
+        text-anchor="middle"
+        font-size="10"
+        fill="#64748b">
+
+        github.com/jatinkahar
+
+    </text>
+
 </g>
 
-<!-- Right Side Profile Frame & Photo -->
-<g transform="translate(850, 20)">
-  <!-- Frame Background -->
-  <rect x="0" y="0" width="210" height="200" rx="14" fill="url(#cardBg)" stroke="url(#borderGrad)" stroke-width="1.5" filter="url(#cardShadow)"/>
-  
-  <!-- Outer Ring Glow Pulse -->
-  <circle cx="105" cy="100" r="60" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity=".4" class="pulse"/>
-  <circle cx="105" cy="100" r="66" fill="none" stroke="#06b6d4" stroke-width="1" opacity=".25"/>
+  <!-- ================= FLOATING TECH CARDS ================= -->
 
-  <!-- Profile Picture (Jatin Kahar) -->
-  <circle cx="105" cy="100" r="54" fill="#0f172a" stroke="url(#primaryGlow)" stroke-width="3"/>
-  <image x="45" y="40" width="120" height="120" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" xlink:href="../images/a.jpg"/>
+<g opacity=".95">
 
-  <!-- Floating Status Badge on Avatar -->
-  <g transform="translate(105, 168)">
-    <rect x="-55" y="-12" width="110" height="24" rx="12" fill="#090d16" stroke="#3b82f6" stroke-width="1"/>
-    <text x="0" y="3" text-anchor="middle" font-size="10" fill="#38bdf8" font-weight="bold">@jatinkahar</text>
-  </g>
+    <!-- JAVA -->
+    <g transform="translate(520 28)">
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="520 28;520 18;520 28"
+            dur="6s"
+            repeatCount="indefinite"/>
+
+        <rect width="90" height="28" rx="8"
+              fill="#111827"
+              stroke="#3b82f6"/>
+
+        <text x="45" y="18"
+              font-size="11"
+              fill="#60a5fa"
+              text-anchor="middle">
+            Java
+        </text>
+    </g>
+
+    <!-- SPRING -->
+
+    <g transform="translate(625 28)">
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="625 28;625 40;625 28"
+            dur="8s"
+            repeatCount="indefinite"/>
+
+        <rect width="120" height="28" rx="8"
+              fill="#111827"
+              stroke="#22c55e"/>
+
+        <text x="60" y="18"
+              font-size="11"
+              fill="#4ade80"
+              text-anchor="middle">
+            Spring Boot
+        </text>
+    </g>
+
+    <!-- DOCKER -->
+
+    <g transform="translate(765 28)">
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="765 28;765 18;765 28"
+            dur="7s"
+            repeatCount="indefinite"/>
+
+        <rect width="92" height="28" rx="8"
+              fill="#111827"
+              stroke="#06b6d4"/>
+
+        <text x="46" y="18"
+              font-size="11"
+              fill="#67e8f9"
+              text-anchor="middle">
+            Docker
+        </text>
+    </g>
+
 </g>
 
-<!-- Top & Bottom Shimmer Overlays -->
-<g clip-path="url(#bannerClip)">
-  <rect x="-300" y="0" width="150" height="240" fill="url(#primaryGlow)" opacity=".08" class="shimmer" pointer-events="none"/>
+<!-- ================= CIRCUIT LINES ================= -->
+
+<g stroke="#38bdf8"
+   stroke-width=".8"
+   opacity=".18">
+
+    <path d="M470 95H560V130H640">
+        <animate
+            attributeName="opacity"
+            values=".08;.35;.08"
+            dur="3s"
+            repeatCount="indefinite"/>
+    </path>
+
+    <path d="M720 105H790V150H860">
+        <animate
+            attributeName="opacity"
+            values=".35;.08;.35"
+            dur="4s"
+            repeatCount="indefinite"/>
+    </path>
+
 </g>
-<clipPath id="bannerClip"><rect width="1100" height="240" rx="16"/></clipPath>
+
+<!-- ================= EXTRA PARTICLES ================= -->
+
+<g fill="#38bdf8">
+
+<circle cx="120" cy="40" r="1.6">
+<animate attributeName="cy"
+values="40;25;40"
+dur="6s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="260" cy="70" r="1.5">
+<animate attributeName="cy"
+values="70;55;70"
+dur="7s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="430" cy="195" r="1.7">
+<animate attributeName="cy"
+values="195;180;195"
+dur="5s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="650" cy="60" r="1.5">
+<animate attributeName="cy"
+values="60;48;60"
+dur="9s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="910" cy="180" r="1.8">
+<animate attributeName="cy"
+values="180;165;180"
+dur="8s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1020" cy="45" r="1.4">
+<animate attributeName="cy"
+values="45;30;45"
+dur="6s"
+repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+<!-- ================= SCAN LIGHT ================= -->
+
+<rect
+    x="-350"
+    y="0"
+    width="180"
+    height="240"
+    fill="url(#blueGlow)"
+    opacity=".05"
+    transform="skewX(-22)">
+
+    <animate
+        attributeName="x"
+        values="-350;1200"
+        dur="8s"
+        repeatCount="indefinite"/>
+
+</rect>
+
+<!-- ================= BORDER GLOW ================= -->
+
+<rect
+    x="1"
+    y="1"
+    width="1098"
+    height="238"
+    rx="18"
+    fill="none"
+    stroke="url(#blueGlow)"
+    stroke-opacity=".25">
+
+    <animate
+        attributeName="stroke-opacity"
+        values=".15;.45;.15"
+        dur="4s"
+        repeatCount="indefinite"/>
+
+</rect>
+
+<!-- ================= FOOTER ================= -->
+
+<text
+    x="1080"
+    y="228"
+    text-anchor="end"
+    font-size="9"
+    fill="#475569">
+
+    github.com/jatinkahar
+
+</text>
 
 </svg>
