@@ -1,19 +1,169 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
-    </linearGradient>
-    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="100%" stop-color="#4facfe" />
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="400" fill="url(#bg)" rx="15" />
-  <circle cx="1050" cy="80" r="150" fill="#00f2fe" opacity="0.05" filter="blur(40px)" />
-  <circle cx="150" cy="320" r="180" fill="#4facfe" opacity="0.05" filter="blur(50px)" />
-  <text x="80" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="800" fill="#ffffff">Hi, I'm <tspan fill="url(#cyan-glow)">Jatin Kahar</tspan></text>
-  <text x="80" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="500" fill="#8b949e">&lt; Assistant System Engineer @ TCS / Java Full Stack Developer &gt;</text>
-  <rect x="80" y="270" width="220" height="40" rx="8" fill="#21262d" stroke="#30363d" stroke-width="2" />
-  <text x="100" y="296" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#58a6ff">⚡ Spring Boot &amp; Java</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 240" width="100%" height="100%" role="img" aria-label="Jatin Kahar Banner">
+<defs>
+<style type="text/css"><![CDATA[
+text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+@keyframes floatOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.1)}}
+@keyframes floatOrb2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,25px) scale(1.15)}}
+@keyframes pulseGlow{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes shimmer{0%{transform:translateX(-300px) skewX(-20deg)}100%{transform:translateX(1400px) skewX(-20deg)}}
+@keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes floatSlowReverse{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.orb1{animation:floatOrb 8s ease-in-out infinite}
+.orb2{animation:floatOrb2 10s ease-in-out infinite}
+.pulse{animation:pulseGlow 3s ease-in-out infinite}
+.shimmer{animation:shimmer 6s ease-in-out infinite}
+.f1{animation:floatSlow 5s ease-in-out infinite}
+.f2{animation:floatSlowReverse 6s ease-in-out infinite}
+]]></style>
+
+<!-- Gradients & Themes -->
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#050816"/>
+  <stop offset="50%" stop-color="#090e1a"/>
+  <stop offset="100%" stop-color="#050816"/>
+</linearGradient>
+
+<linearGradient id="primaryGlow" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#3b82f6"/>
+  <stop offset="100%" stop-color="#06b6d4"/>
+</linearGradient>
+
+<linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#60a5fa"/>
+  <stop offset="50%" stop-color="#38bdf8"/>
+  <stop offset="100%" stop-color="#06b6d4"/>
+</linearGradient>
+
+<linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#0f172a" stop-opacity=".85"/>
+  <stop offset="100%" stop-color="#0b1329" stop-opacity=".95"/>
+</linearGradient>
+
+<linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#3b82f6" stop-opacity=".8"/>
+  <stop offset="50%" stop-color="#06b6d4" stop-opacity=".4"/>
+  <stop offset="100%" stop-color="#1e3a8a" stop-opacity=".8"/>
+</linearGradient>
+
+<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+  <feGaussianBlur stdDeviation="12" result="blur"/>
+  <feMerge>
+    <feMergeNode in="blur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+<filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+  <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".6"/>
+</filter>
+
+<clipPath id="avatarClip">
+  <circle cx="985" cy="120" r="54"/>
+</clipPath>
+</defs>
+
+<!-- Background -->
+<rect width="1100" height="240" fill="url(#bg)" rx="16"/>
+
+<!-- Ambient Glow Orbs -->
+<circle cx="200" cy="50" r="120" fill="#3b82f6" opacity=".12" filter="url(#glow)" class="orb1"/>
+<circle cx="850" cy="180" r="140" fill="#06b6d4" opacity=".1" filter="url(#glow)" class="orb2"/>
+
+<!-- Animated Grid Lines -->
+<g stroke="#1e293b" stroke-width="1" opacity=".35">
+  <path d="M0 40h1100M0 80h1100M0 120h1100M0 160h1100M0 200h1100" />
+  <path d="M150 0v240M300 0v240M450 0v240M600 0v240M750 0v240M900 0v240" />
+</g>
+
+<!-- Floating Tech Elements / Badges (Left/Center) -->
+<g class="f1" transform="translate(480, 25)">
+  <rect x="0" y="0" width="110" height="32" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+  <text x="55" y="21" text-anchor="middle" font-size="11" fill="#60a5fa" font-weight="bold">☕ Java 17+</text>
+</g>
+
+<g class="f2" transform="translate(605, 25)">
+  <rect x="0" y="0" width="125" height="32" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1" filter="url(#cardShadow)"/>
+  <text x="62.5" y="21" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="bold">🌱 Spring Boot</text>
+</g>
+
+<g class="f1" transform="translate(745, 25)">
+  <rect x="0" y="0" width="100" height="32" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+  <text x="50" y="21" text-anchor="middle" font-size="11" fill="#93c5fd" font-weight="bold">🐳 Docker</text>
+</g>
+
+<!-- Main Profile & Info Container -->
+<g transform="translate(40, 20)">
+  <!-- Left Side Glass Panel -->
+  <rect x="0" y="0" width="790" height="200" rx="14" fill="url(#cardBg)" stroke="url(#borderGrad)" stroke-width="1.5" filter="url(#cardShadow)"/>
+  
+  <!-- Accent Line Left -->
+  <rect x="0" y="0" width="5" height="200" rx="2.5" fill="url(#primaryGlow)"/>
+
+  <!-- Developer Details -->
+  <g transform="translate(30, 28)">
+    <!-- Status Pill -->
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#1e293b" opacity=".9"/>
+    <circle cx="12" cy="12" r="4" fill="#22c55e" class="pulse"/>
+    <text x="24" y="16" font-size="10" fill="#38bdf8" font-weight="bold" letter-spacing=".5">TCS • ASSISTANT SYS ENG</text>
+
+    <!-- Name -->
+    <text x="0" y="65" font-size="34" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing=".5">Jatin Kahar</text>
+    
+    <!-- Title / Subtitle -->
+    <text x="0" y="90" font-size="13" fill="#94a3b8" letter-spacing="1">JAVA BACKEND DEVELOPER &amp; DSA ENTHUSIAST</text>
+
+    <!-- Tech Badges Row -->
+    <g transform="translate(0, 110)">
+      <!-- Tech 1 -->
+      <rect x="0" y="0" width="85" height="26" rx="6" fill="#172554" stroke="#3b82f6" stroke-width=".8"/>
+      <text x="42.5" y="17" text-anchor="middle" font-size="10" fill="#93c5fd">Spring Boot</text>
+
+      <!-- Tech 2 -->
+      <rect x="93" y="0" width="75" height="26" rx="6" fill="#164e63" stroke="#06b6d4" stroke-width=".8"/>
+      <text x="130.5" y="17" text-anchor="middle" font-size="10" fill="#67e8f9">REST APIs</text>
+
+      <!-- Tech 3 -->
+      <rect x="176" y="0" width="70" height="26" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width=".8"/>
+      <text x="211" y="17" text-anchor="middle" font-size="10" fill="#a5b4fc">Docker</text>
+
+      <!-- Tech 4 -->
+      <rect x="254" y="0" width="65" height="26" rx="6" fill="#064e3b" stroke="#10b981" stroke-width=".8"/>
+      <text x="286.5" y="17" text-anchor="middle" font-size="10" fill="#6ee7b7">Linux</text>
+
+      <!-- Tech 5 -->
+      <rect x="327" y="0" width="75" height="26" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width=".8"/>
+      <text x="364.5" y="17" text-anchor="middle" font-size="10" fill="#e879f9">Python AI</text>
+    </g>
+
+    <!-- Terminal Code Tagline -->
+    <text x="0" y="162" font-size="11" fill="#64748b">&gt; Building scalable backend applications &amp; high-performance code[cite: 1]</text>
+  </g>
+</g>
+
+<!-- Right Side Profile Frame & Photo -->
+<g transform="translate(850, 20)">
+  <!-- Frame Background -->
+  <rect x="0" y="0" width="210" height="200" rx="14" fill="url(#cardBg)" stroke="url(#borderGrad)" stroke-width="1.5" filter="url(#cardShadow)"/>
+  
+  <!-- Outer Ring Glow Pulse -->
+  <circle cx="105" cy="100" r="60" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity=".4" class="pulse"/>
+  <circle cx="105" cy="100" r="66" fill="none" stroke="#06b6d4" stroke-width="1" opacity=".25"/>
+
+  <!-- Profile Picture (Jatin Kahar) -->
+  <circle cx="105" cy="100" r="54" fill="#0f172a" stroke="url(#primaryGlow)" stroke-width="3"/>
+  <image x="45" y="40" width="120" height="120" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" xlink:href="../images/a.jpg"/>
+
+  <!-- Floating Status Badge on Avatar -->
+  <g transform="translate(105, 168)">
+    <rect x="-55" y="-12" width="110" height="24" rx="12" fill="#090d16" stroke="#3b82f6" stroke-width="1"/>
+    <text x="0" y="3" text-anchor="middle" font-size="10" fill="#38bdf8" font-weight="bold">@jatinkahar</text>
+  </g>
+</g>
+
+<!-- Top & Bottom Shimmer Overlays -->
+<g clip-path="url(#bannerClip)">
+  <rect x="-300" y="0" width="150" height="240" fill="url(#primaryGlow)" opacity=".08" class="shimmer" pointer-events="none"/>
+</g>
+<clipPath id="bannerClip"><rect width="1100" height="240" rx="16"/></clipPath>
+
 </svg>
