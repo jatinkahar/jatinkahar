@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 495 195"
+     width="495"
+     height="195"
+     role="img"
+     aria-label="Jatin Kahar GitHub Trophies">
+
+<defs>
+
+<style><![CDATA[
+
+text{
+ font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace
+}
+
+@keyframes popUp{
+ 0%{
+  opacity:0;
+ }
+ 100%{
+  opacity:1;
+ }
+}
+
+@keyframes pulseGlow{
+ 0%,100%{
+  opacity:.7;
+ }
+ 50%{
+  opacity:1;
+ }
+}
+
+.card-anim{
+ animation:popUp .6s ease forwards;
+}
+
+.glow-anim{
+ animation:pulseGlow 2.5s ease-in-out infinite;
+}
+
+]]></style>
+
+
+
+<!-- Background Gradient -->
+
+<linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#050816"/>
+ <stop offset="100%" stop-color="#0b1120"/>
+</linearGradient>
+
+
+
+<!-- Border Gradient -->
+
+<linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#3b82f6" stop-opacity=".6"/>
+ <stop offset="50%" stop-color="#06b6d4" stop-opacity=".3"/>
+ <stop offset="100%" stop-color="#1e3a8a" stop-opacity=".6"/>
+</linearGradient>
+
+
+
+<!-- Clip Card -->
+
+<clipPath id="cardClip">
+ <rect x="0"
+       y="0"
+       width="495"
+       height="195"
+       rx="14"/>
+</clipPath>
+
+
+</defs>
+
+
+
+<!-- Card Wrapper -->
+
+<g clip-path="url(#cardClip)">
+
+
+
+<!-- Card Background -->
+
+<rect x="1.5"
+      y="1.5"
+      width="492"
+      height="192"
+      rx="14"
+      fill="url(#bgGrad)"
+      stroke="url(#borderGrad)"
+      stroke-width="1.5"/>
+
+
+
+<!-- Header Title -->
+
+<g transform="translate(25,32)">
+
+<text x="0"
+      y="11"
+      font-size="14"
+      font-weight="bold"
+      fill="#f8fafc"
+      letter-spacing=".5">
+🏆 Developer Achievements &amp; Trophies
+</text>
+
+
+<line x1="0"
+      y1="22"
+      x2="445"
+      y2="22"
+      stroke="#1e293b"
+      stroke-width="1"/>
+
+</g>
+
+
+
+
+<!-- Trophy Grid -->
+
+<g transform="translate(25,68)"
+   class="card-anim">
+
+
+
+<!-- Trophy 1 -->
+
+<g transform="translate(0,0)">
+
+<rect width="138"
+      height="92"
+      rx="10"
+      fill="#0f172a"
+      stroke="#3b82f6"
+      stroke-width="1.2"/>
+
+
+<text x="69"
+      y="30"
+      text-anchor="middle"
+      font-size="24">
+🍥
+</text>
+
+
+<text x="69"
+      y="58"
+      text-anchor="middle"
+      font-size="12"
+      font-weight="bold"
+      fill="#e2e8f0">
+Java Backend
+</text>
+
+
+<rect x="34"
+      y="68"
+      width="70"
+      height="16"
+      rx="8"
+      fill="#1e3a8a"/>
+
+
+<text x="69"
+      y="80"
+      text-anchor="middle"
+      font-size="10"
+      font-weight="bold"
+      fill="#60a5fa">
+RANK SSS
+</text>
+
+</g>
+
+
+
+
+
+<!-- Trophy 2 -->
+
+<g transform="translate(153,0)">
+
+<rect width="138"
+      height="92"
+      rx="10"
+      fill="#0f172a"
+      stroke="#06b6d4"
+      stroke-width="1.2"/>
+
+
+<text x="69"
+      y="30"
+      text-anchor="middle"
+      font-size="24">
+⭐
+</text>
+
+
+<text x="69"
+      y="58"
+      text-anchor="middle"
+      font-size="12"
+      font-weight="bold"
+      fill="#e2e8f0">
+Stargazer
+</text>
+
+
+<rect x="34"
+      y="68"
+      width="70"
+      height="16"
+      rx="8"
+      fill="#164e63"/>
+
+
+<text x="69"
+      y="80"
+      text-anchor="middle"
+      font-size="10"
+      font-weight="bold"
+      fill="#38bdf8">
+RANK S
+</text>
+
+</g>
+
+
+
+
+
+<!-- Trophy 3 -->
+
+<g transform="translate(306,0)">
+
+<rect width="138"
+      height="92"
+      rx="10"
+      fill="#0f172a"
+      stroke="#6366f1"
+      stroke-width="1.2"/>
+
+
+<text x="69"
+      y="30"
+      text-anchor="middle"
+      font-size="24">
+💻
+</text>
+
+
+<text x="69"
+      y="58"
+      text-anchor="middle"
+      font-size="12"
+      font-weight="bold"
+      fill="#e2e8f0">
+Committer
+</text>
+
+
+<rect x="34"
+      y="68"
+      width="70"
+      height="16"
+      rx="8"
+      fill="#312e81"/>
+
+
+<text x="69"
+      y="80"
+      text-anchor="middle"
+      font-size="10"
+      font-weight="bold"
+      fill="#818cf8">
+RANK A
+</text>
+
+</g>
+
+
+
+</g>
+
+
+</g>
+
+
+</svg>
