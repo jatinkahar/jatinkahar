@@ -1,14 +1,13 @@
 <div align="center"> 
-<img src="assets/hero/banner-dark.svg#gh-dark-mode-only" width="100%" alt="Jatin Kahar Banner"> 
-<img src="assets/hero/banner-light.svg#gh-light-mode-only" width="100%" alt="Jatin Kahar Banner"> 
+<img src="assets/hero/banner-dark.svg" width="100%" alt="Banner"> 
 </div> 
  
-<td align="center" width="40%"> 
-<img src="assets/hero/lanyard.svg" width="100%" alt="Jatin ID Card"> 
-</td> 
-<td align="center" width="60%"> 
-<img src="assets/cards/stats.svg" width="100%" alt="Stats"><br> 
-<img src="assets/cards/langs.svg" width="100%" alt="Languages"><br> 
-<img src="assets/cards/trophies.svg" width="100%" alt="Trophies"> 
-</td> 
-</tr></table> 
+<p align="center"> 
+<img src="assets/hero/lanyard.svg" width="300px" alt="Lanyard ID"> &nbsp;&nbsp; 
+<img src="assets/cards/stats.svg" width="450px" alt="Stats"> 
+</p> 
+ 
+<p align="center"> 
+<img src="assets/cards/langs.svg" width="380px" alt="Languages"> &nbsp;&nbsp; 
+<img src="assets/cards/trophies.svg" width="380px" alt="Trophies"> 
+</p> 
